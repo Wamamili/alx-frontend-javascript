@@ -25,12 +25,12 @@ const director1: Director = {
 console.log(director1);
 
 // Interface for printTeacher function
-interface printTeacherFunction {
+interface printTeacher {
     ({ firstName, lastName }: { firstName: string; lastName: string }): string;
 }
 
 // Implementation of the function
-const printTeacher: printTeacherFunction = ({ firstName, lastName }) => {
+const printTeacher: printTeacher = ({ firstName, lastName }) => {
     return `${firstName.charAt(0)}. ${lastName}`;
 };
 
