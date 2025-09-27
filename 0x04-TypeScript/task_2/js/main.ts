@@ -71,7 +71,7 @@ function executeWork(employee: Director | Teacher): string {
 type Subjects = "Math" | "History";
 
 // Function using string literal type with explicit annotation
-function teachClass(todayClass: Subjects): string {
+function teachClass(todayClass:Subjects): string {
   if (todayClass === "Math") {
     return "Teaching Math";
   }
