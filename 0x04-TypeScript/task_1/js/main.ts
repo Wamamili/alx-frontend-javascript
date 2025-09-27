@@ -1,18 +1,16 @@
-// task_1/js/main.ts
-
-// Define the Teacher interface
+// Define Teacher interface
 interface Teacher {
-    readonly firstName: string;
-    readonly lastName: string;
+    firstName: string;
+    lastName: string;
     fullTimeEmployee: boolean;
     yearsOfExperience?: number;
     location: string;
-    [propName: string]: any;  // allows extra properties
+    [key: string]: any; // allows additional properties
 }
 
-// Directors interface extending Teacher
+// Extend Teacher interface for Directors
 interface Directors extends Teacher {
-    numberOfReports: number;  // new required property
+    numberOfReports: number;
 }
 
 // Example usage
