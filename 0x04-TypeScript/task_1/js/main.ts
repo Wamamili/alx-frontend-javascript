@@ -29,9 +29,7 @@ function printTeacher(firstName: string, lastName: string): string {
 }
 
 // Interface for the function
-interface printTeacherFunction {
-    (firstName: string, lastName: string): string;
-}
+interface printTeacherFunction "{ firstName, lastName }: string) => string;
 
 // Example usage
 console.log(printTeacher("John", "Doe"));
