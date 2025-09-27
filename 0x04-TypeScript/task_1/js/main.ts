@@ -1,20 +1,27 @@
+// task_1/js/main.ts
+
 // Define the Teacher interface
 interface Teacher {
-    readonly firstName: string;       // cannot be modified after initialization
-    readonly lastName: string;        // cannot be modified after initialization
-    fullTimeEmployee: boolean;        // must always be defined
-    yearsOfExperience?: number;       // optional
-    location: string;                 // must always be defined
-    [propName: string]: any;          // allows extra properties
+    readonly firstName: string;
+    readonly lastName: string;
+    fullTimeEmployee: boolean;
+    yearsOfExperience?: number;
+    location: string;
+    [propName: string]: any;  // allows extra properties
+}
+
+// Directors interface extending Teacher
+interface Directors extends Teacher {
+    numberOfReports: number;  // new required property
 }
 
 // Example usage
-const teacher3: Teacher = {
+const director1: Directors = {
     firstName: 'John',
     lastName: 'Doe',
-    fullTimeEmployee: false,
     location: 'London',
-    contract: false, // extra property not declared above
+    fullTimeEmployee: true,
+    numberOfReports: 17,
 };
 
-console.log(teacher3);
+console.log(director1);
