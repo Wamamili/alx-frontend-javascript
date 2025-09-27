@@ -23,17 +23,16 @@ const director1: Director = {
 };
 
 console.log(director1);
+// Function implementation
+function printTeacher(firstName: string, lastName: string): string {
+    return `${firstName}. ${lastName}`;
+}
 
 // Interface for the function
 interface printTeacherFunction {
     (firstName: string, lastName: string): string;
 }
 
-// Function implementation using destructuring
-const printTeacher: printTeacherFunction = function ({ firstName, lastName }: { firstName: string; lastName: string }): string {
-    return `${firstName[0]}. ${lastName}`;
-};
-
 // Example usage
-console.log(printTeacher({ firstName: "John", lastName: "Doe" }));
+console.log(printTeacher("John", "Doe"));
 // Output: J. Doe
