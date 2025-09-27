@@ -48,7 +48,7 @@ interface StudentClassInterface {
     displayName(): string;
 }
 
-// Implementation of the StudentClass
+// Class StudentClass implementation
 class StudentClass implements StudentClassInterface {
     private firstName: string;
     private lastName: string;
